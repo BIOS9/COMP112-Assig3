@@ -1,0 +1,21 @@
+/* Reflection.txt for COMP112 - 2018T1, Assignment 3
+ * Name: Matthew Corfiatis
+ * Username: CorfiaMatt
+ * ID: 300447277
+ */
+
+Questions for Reflection: 
+=========================
+
+1. Explain the reason for your choice of parameters for the =drawTile= method.
+
+2. Why is finding the median value difficult?  The simplest ways of doing it would
+take a long time for large data sets; how could you do it efficiently?
+
+
+Reflection:
+=========================
+For the drawTile method, I used x, y, width, and height so the tile position and size could be specified. I used a boolean value to indicate wheather the tile should be a straight line type or a curved line type. The two color variables combined with the rotate90 boolean allow you to specify any of the basic tiles with two lines on them. 
+
+The median value was difficult to calculate because for the algorithm I am using, the values must be sorted to find the middle ones. I am using Collections.sort to sort the data, this method implements Merge Sort. Merge sort is not the fastest best case sorting algorithm. This sorting requires a relatively large amount of system resources so it would take a long time for large data sets. To do this more efficiently, a faster sorting algorithm such as Quick Sort could be used, or use a selection algorithm such as Quick Select to find the (k)th smallest value where k is the size of the array / 2. There are also other algorithms such as Median of Medians that finds an approximate median.
+
